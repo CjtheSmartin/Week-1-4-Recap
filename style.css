@@ -1,0 +1,522 @@
+
+/* ========================================
+   KAIROVA INFORMATION CENTER
+   MAIN STYLESHEET
+======================================== */
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f1f4f8;
+    color: #1d2939;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+}
+
+a {
+    color: #175cd3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.site-header {
+    background: #123b66;
+    color: #ffffff;
+    padding: 42px 0;
+    border-bottom: 5px solid #fdb022;
+}
+
+.brand-label {
+    margin: 0 0 8px;
+    color: #fdb022;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.tagline {
+    margin: 12px 0 0;
+    color: #dbeafe;
+    font-size: 1.05rem;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    background: #ffffff;
+    border-bottom: 1px solid #d0d5dd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.navigation a {
+    padding: 8px 14px;
+    color: #344054;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.navigation a:hover {
+    background: #eaf2ff;
+    color: #175cd3;
+    text-decoration: none;
+}
+
+#themeButton {
+    margin-left: auto;
+    padding: 8px 14px;
+    background: #344054;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#themeButton:hover {
+    background: #175cd3;
+}
+
+/* STATUS BAR */
+
+.status-bar {
+    background: #eaf2ff;
+    border-bottom: 1px solid #c7d7ee;
+}
+
+.status-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: #175cd3;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #12b76a;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.offline {
+    background: #f04438;
+}
+
+/* MAIN LAYOUT */
+
+.page-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+/* ARTICLE */
+
+.article {
+    background: #ffffff;
+    padding: clamp(24px, 4vw, 48px);
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(16, 24, 40, 0.04);
+}
+
+.article-category {
+    margin: 0 0 12px;
+    color: #175cd3;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.article h2 {
+    margin: 0;
+    color: #123b66;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.25;
+}
+
+.article-intro {
+    color: #475467;
+    font-size: 1.12rem;
+    margin: 20px 0;
+}
+
+.article-meta {
+    color: #667085;
+    font-size: 0.82rem;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.article hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eaecf0;
+}
+
+.article section {
+    margin-bottom: 38px;
+    scroll-margin-top: 90px;
+}
+
+.article h3 {
+    margin: 0 0 14px;
+    color: #123b66;
+    font-size: 1.45rem;
+    line-height: 1.35;
+}
+
+.article h4 {
+    margin: 0 0 8px;
+    color: #123b66;
+    font-size: 1.05rem;
+}
+
+.article p {
+    margin: 0 0 16px;
+}
+
+/* INFORMATION BOX */
+
+.info-box {
+    background: #eff8ff;
+    border-left: 4px solid #175cd3;
+    padding: 18px 20px;
+    margin: 25px 0;
+}
+
+.info-box strong {
+    color: #123b66;
+}
+
+.info-box p {
+    margin: 8px 0 0;
+}
+
+/* RESOURCE CARDS */
+
+.resource-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.resource-card {
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+}
+
+.resource-card p {
+    font-size: 0.9rem;
+    color: #475467;
+}
+
+.resource-card a {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* FAQ */
+
+details {
+    border: 1px solid #d0d5dd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 14px 16px;
+    background: #f8fafc;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #123b66;
+}
+
+details p {
+    margin: 12px 0 0;
+    font-size: 0.92rem;
+}
+
+/* FORM */
+
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#feedbackForm label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#feedbackForm input,
+#feedbackForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1d2939;
+    font: inherit;
+    resize: vertical;
+}
+
+#feedbackForm input:focus,
+#feedbackForm textarea:focus {
+    outline: 2px solid #84adf5;
+    outline-offset: 1px;
+}
+
+.primary-button {
+    width: fit-content;
+    padding: 11px 20px;
+    margin-top: 8px;
+    background: #175cd3;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #123b66;
+}
+
+.form-message {
+    color: #027a48;
+    font-size: 0.9rem;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar-card {
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.sidebar-card h3 {
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaf2ff;
+    color: #123b66;
+    font-size: 1.05rem;
+}
+
+.sidebar-card p {
+    margin: 0 0 10px;
+}
+
+.sidebar-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.sidebar-card li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.small-text {
+    font-size: 0.82rem;
+    color: #667085;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: #123b66;
+    color: #dbeafe;
+    text-align: center;
+    padding: 35px 0;
+    border-top: 5px solid #fdb022;
+}
+
+.site-footer h3 {
+    margin: 0 0 8px;
+    color: #ffffff;
+}
+
+.site-footer p {
+    margin: 5px 0;
+    font-size: 0.85rem;
+}
+
+/* DARK MODE */
+
+body.dark-mode {
+    background: #101828;
+    color: #e4e7ec;
+}
+
+body.dark-mode .navigation,
+body.dark-mode .article,
+body.dark-mode .sidebar-card {
+    background: #1d2939;
+    border-color: #344054;
+}
+
+body.dark-mode .navigation a {
+    color: #e4e7ec;
+}
+
+body.dark-mode .navigation a:hover {
+    background: #344054;
+    color: #ffffff;
+}
+
+body.dark-mode .article h2,
+body.dark-mode .article h3,
+body.dark-mode .article h4,
+body.dark-mode .sidebar-card h3,
+body.dark-mode summary,
+body.dark-mode .info-box strong {
+    color: #dbeafe;
+}
+
+body.dark-mode .article-intro,
+body.dark-mode .article-meta,
+body.dark-mode .resource-card p,
+body.dark-mode .small-text {
+    color: #b5c0d0;
+}
+
+body.dark-mode .article hr {
+    border-color: #344054;
+}
+
+body.dark-mode .resource-card,
+body.dark-mode details {
+    background: #101828;
+    border-color: #344054;
+}
+
+body.dark-mode .info-box {
+    background: #172b4d;
+    border-color: #84adf5;
+}
+
+body.dark-mode #feedbackForm input,
+body.dark-mode #feedbackForm textarea {
+    background: #101828;
+    border-color: #475467;
+    color: #ffffff;
+}
+
+body.dark-mode .status-bar {
+    background: #172b4d;
+    border-color: #344054;
+}
+
+body.dark-mode .status-inner {
+    color: #b2ddff;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resource-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .container {
+        width: min(100% - 24px, 1180px);
+    }
+
+    .navigation {
+        position: static;
+    }
+
+    .nav-inner {
+        gap: 3px;
+    }
+
+    .navigation a {
+        padding: 7px 9px;
+        font-size: 0.8rem;
+    }
+
+    #themeButton {
+        margin-left: 0;
+    }
+
+    .article {
+        padding: 22px 18px;
+    }
+
+    .sidebar {
+        display: flex;
+    }
+
+    .article h2 {
+        font-size: 1.8rem;
+    }
+
+}
